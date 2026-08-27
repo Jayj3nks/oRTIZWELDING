@@ -35,9 +35,19 @@ Open `index.html` and search for `TODO` — every spot that needs your real info
 
 3. Update the `<figcaption>` text under each frame.
 
+## Set up the quote form (5 minutes, free)
+
+The form uses [FormSubmit](https://formsubmit.co) — free, no account, no API key. Job details and the photo attachment land straight in your email inbox.
+
+1. Open `script.js` and set `QUOTE_FORM_EMAIL` at the very top to your email address.
+2. Publish the site, then send **one test submission** through the form.
+3. FormSubmit emails you an **activation link** — click it once. All future submissions arrive automatically.
+
+Limits: 1 photo per submission, 5 MB max (customers can text extra photos — the site says so). To hide your email from the page source, FormSubmit can give you a random string alias — paste it in place of the email in `script.js`.
+
 ## Edit prices
 
-Prices live in the `<ol class="price-list">` block in `index.html` — one `<li class="price">` per row, plain text, easy to tweak.
+Prices live in the `<ol class="price-list">` block in `index.html` — one `<li class="price">` per row, plain text, easy to tweak. The same price ranges appear in the form's "Job type" dropdown.
 
 ## Files
 

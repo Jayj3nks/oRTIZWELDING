@@ -21,10 +21,11 @@ Build a website for a freelance welder with a specific price scheme (service cal
 - Responsive (mobile grid stacks), prefers-reduced-motion support, no-JS content fallback
 - README with GitHub Pages publish steps and photo-swap instructions
 - Verified: served locally, screenshotted hero/pricing/contact/services/gallery desktop + mobile, no console errors
+- Quote form (FormSubmit, free): name/email/phone/job-type/message + optional photo attachment (1 image, 5MB max), honeypot spam trap, AJAX submit with success/error states, "Get a quote" nav button scrolls to it. Owner email set via QUOTE_FORM_EMAIL constant at top of script.js; one-time FormSubmit activation email required after first real submission. Verified with mocked endpoint (route intercept) — submit flow + success message confirmed; real email delivery NOT tested (owner must set email and activate)
 
 ## Backlog
 - P0: User replaces placeholders — business name, phone, email, city, about story, gallery photos
-- P1: Optional quote-request form (would need a free form service like Formspree on static hosting)
+- P0: User sets QUOTE_FORM_EMAIL in script.js and clicks the FormSubmit activation email after first test submission
 - P1: Custom domain setup on GitHub Pages
 - P2: Testimonials section, before/after repair slider, FAQ, SEO meta/OG image
 

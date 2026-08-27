@@ -1,4 +1,9 @@
 /* IRONBOUND WELDING — motion & sparks */
+
+/* ══ TODO: set the email that should receive quote requests.
+   First submission triggers a one-time activation email from FormSubmit — click it once. ══ */
+const QUOTE_FORM_EMAIL = "hello@yourwelding.com";
+
 (() => {
   "use strict";
 
@@ -146,6 +151,58 @@
       ctx.shadowBlur = 0;
     };
     tick();
+  }
+
+  /* ── Quote form → FormSubmit (free, emails details + photo attachment) ── */
+  const form = document.getElementById("quoteForm");
+  if (form) {
+    const fileInput = document.getElementById("qPhoto");
+    const drop = document.getElementById("fileDrop");
+    const dropText = document.getElementById("fileDropText");
+    const submitBtn = document.getElementById("quoteSubmit");
+    const status = document.getElementById("quoteStatus");
+    const MAX_BYTES = 5 * 1024 * 1024;
+
+    fileInput.addEventListener("change", () => {
+      const f = fileInput.files[0];
+      if (f && !f.type.startsWith("image/")) { fileInput.value = ""; return; }
+      if (f && f.size > MAX_BYTES) {
+        fileInput.value = "";
+        drop.classList.remove("has-file");
+        dropText.textContent = "Photo too large — 5 MB max, or text it instead";
+        return;
+      }
+      drop.classList.toggle("has-file", !!f);
+      dropText.textContent = f ? `Attached: ${f.name}` : "Tap to attach a photo of the job";
+    });
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      if (form._honey.value) return;
+      status.className = "quote__status";
+      status.textContent = "";
+      submitBtn.disabled = true;
+      submitBtn.querySelector("span").textContent = "Sending…";
+      try {
+        const res = await fetch(`https://formsubmit.co/ajax/${QUOTE_FORM_EMAIL}`, {
+          method: "POST",
+          body: new FormData(form),
+          headers: { Accept: "application/json" },
+        });
+        if (!res.ok) throw new Error("send failed");
+        form.reset();
+        drop.classList.remove("has-file");
+        dropText.textContent = "Tap to attach a photo of the job";
+        status.classList.add("is-ok");
+        status.textContent = "REQUEST SENT — expect a reply within 24 hours. First time? Check for a FormSubmit activation email.";
+      } catch {
+        status.classList.add("is-err");
+        status.textContent = "SEND FAILED — please call or text instead (details below).";
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.querySelector("span").textContent = "Send quote request";
+      }
+    });
   }
 
   /* ── Gallery spotlight cursor ── */

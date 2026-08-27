@@ -29,7 +29,7 @@
       <a href="#pricing" data-scroll data-testid="nav-pricing">Prices</a>
       <a href="#work" data-scroll data-testid="nav-work">Work</a>
     </nav>
-    <a href="#contact" class="btn btn--pill" data-scroll data-testid="nav-quote-btn"><span>Get a quote</span></a>
+    <a href="#quote" class="btn btn--pill" data-scroll data-testid="nav-quote-btn"><span>Get a quote</span></a>
   </header>
 
   <main id="top">
@@ -220,6 +220,75 @@
         </figure>
       </div>
       <!-- TODO: drop your photos into /docs/photos/ and swap each .frame__inner--empty div for an <img> tag -->
+    </section>
+
+    <!-- ═══ QUOTE FORM ═══ -->
+    <section class="quote" id="quote" data-testid="quote-section">
+      <header class="section-head" data-reveal>
+        <span class="section-head__no">FREE QUOTES · REPLY WITHIN 24H</span>
+        <h2 class="section-head__title">REQUEST A QUOTE</h2>
+      </header>
+
+      <div class="quote__grid">
+        <aside class="quote__side" data-reveal>
+          <ol class="quote__steps">
+            <li><span>01</span>Describe the job — what broke, or what you want built.</li>
+            <li><span>02</span>Attach a photo if you have one — it speeds up the quote.</li>
+            <li><span>03</span>Get a firm price back by email, usually within 24 hours.</li>
+          </ol>
+          <p class="quote__side-note">Prefer to talk? <a href="#contact" data-scroll>Call or text instead ↓</a></p>
+        </aside>
+
+        <form id="quoteForm" class="quote__form" data-reveal data-testid="quote-form">
+          <div class="field">
+            <label for="qName">NAME</label>
+            <input id="qName" name="name" type="text" required autocomplete="name" placeholder="Jane Cooper" data-testid="quote-name-input" />
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="qEmail">EMAIL</label>
+              <input id="qEmail" name="email" type="email" required autocomplete="email" placeholder="jane@email.com" data-testid="quote-email-input" />
+            </div>
+            <div class="field">
+              <label for="qPhone">PHONE <em>(optional)</em></label>
+              <input id="qPhone" name="phone" type="tel" autocomplete="tel" placeholder="(555) 000-0000" data-testid="quote-phone-input" />
+            </div>
+          </div>
+          <div class="field">
+            <label for="qType">JOB TYPE</label>
+            <select id="qType" name="job_type" required data-testid="quote-type-select">
+              <option value="" disabled selected>Select the closest match…</option>
+              <option>Tiny repair — one crack, bracket, tack job ($200–$300)</option>
+              <option>Small repair — chair, railing, hinge, exhaust ($300–$450)</option>
+              <option>Medium repair / fabrication ($450–$750)</option>
+              <option>Larger fabrication — gate, railing, table frame ($750–$1,500+)</option>
+              <option>Custom fabrication project ($1,500–$5,000+)</option>
+              <option>Large commercial / custom work</option>
+              <option>Not sure — help me figure it out</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="qMsg">DESCRIBE THE JOB</label>
+            <textarea id="qMsg" name="message" rows="5" required placeholder="What is it, where is it, and when do you need it done?" data-testid="quote-message-input"></textarea>
+          </div>
+          <div class="field">
+            <label for="qPhoto">PHOTO <em>(optional · 1 image, max 5&nbsp;MB)</em></label>
+            <label class="file-drop" for="qPhoto" id="fileDrop" data-testid="quote-photo-drop">
+              <span class="file-drop__icon" aria-hidden="true">＋</span>
+              <span class="file-drop__text" id="fileDropText">Tap to attach a photo of the job</span>
+            </label>
+            <input id="qPhoto" name="attachment" type="file" accept="image/jpeg,image/png,image/webp" hidden data-testid="quote-photo-input" />
+          </div>
+
+          <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
+          <input type="hidden" name="_subject" value="New quote request — welding website" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_captcha" value="false" />
+
+          <button type="submit" class="btn btn--solid quote__submit" id="quoteSubmit" data-testid="quote-submit-btn"><span>Send quote request</span></button>
+          <p class="quote__status" id="quoteStatus" role="status" aria-live="polite" data-testid="quote-status"></p>
+        </form>
+      </div>
     </section>
 
     <!-- ═══ CONTACT ═══ -->
