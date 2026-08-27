@@ -35,15 +35,13 @@ Open `index.html` and search for `TODO` — every spot that needs your real info
 
 3. Update the `<figcaption>` text under each frame.
 
-## Set up the quote form (5 minutes, free)
+## Quote form (FormSubmit — free, already wired)
 
-The form uses [FormSubmit](https://formsubmit.co) — free, no account, no API key. Job details and the photo attachment land straight in your email inbox.
+The form uses [FormSubmit](https://formsubmit.co) — free, no account, no API key. Job details and the photo attachment are emailed to **ortizbe8813@gmail.com**, and customers get an automatic "got your request" reply (`_autoresponse` field in `index.html` — edit the wording there).
 
-1. Open `script.js` and set `QUOTE_FORM_EMAIL` at the very top to your email address.
-2. Publish the site, then send **one test submission** through the form.
-3. FormSubmit emails you an **activation link** — click it once. All future submissions arrive automatically.
+**One-time activation:** after publishing, send one test submission through the live form, then click the activation link FormSubmit emails to ortizbe8813@gmail.com. All future submissions (and auto-replies) then work automatically.
 
-Limits: 1 photo per submission, 5 MB max (customers can text extra photos — the site says so). To hide your email from the page source, FormSubmit can give you a random string alias — paste it in place of the email in `script.js`.
+Limits: 1 photo per submission, 5 MB max (the site prompts customers to text extra photos to (917) 799-5106).
 
 ## Edit prices
 

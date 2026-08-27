@@ -2,7 +2,7 @@
 
 /* ══ TODO: set the email that should receive quote requests.
    First submission triggers a one-time activation email from FormSubmit — click it once. ══ */
-const QUOTE_FORM_EMAIL = "hello@yourwelding.com";
+const QUOTE_FORM_EMAIL = "ortizbe8813@gmail.com";
 
 (() => {
   "use strict";

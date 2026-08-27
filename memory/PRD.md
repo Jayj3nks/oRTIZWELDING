@@ -21,7 +21,9 @@ Build a website for a freelance welder with a specific price scheme (service cal
 - Responsive (mobile grid stacks), prefers-reduced-motion support, no-JS content fallback
 - README with GitHub Pages publish steps and photo-swap instructions
 - Verified: served locally, screenshotted hero/pricing/contact/services/gallery desktop + mobile, no console errors
-- Quote form (FormSubmit, free): name/email/phone/job-type/message + optional photo attachment (1 image, 5MB max), honeypot spam trap, AJAX submit with success/error states, "Get a quote" nav button scrolls to it. Owner email set via QUOTE_FORM_EMAIL constant at top of script.js; one-time FormSubmit activation email required after first real submission. Verified with mocked endpoint (route intercept) — submit flow + success message confirmed; real email delivery NOT tested (owner must set email and activate)
+- Quote form (FormSubmit, free): name/email/phone/job-type/message + optional photo attachment (1 image, 5MB max), honeypot spam trap, AJAX submit with success/error states, "Get a quote" nav button scrolls to it. Verified with mocked endpoint — submit flow + success message confirmed; real email delivery pending one-time FormSubmit activation
+- Personalization done: ORTIZ WELDING, Bryant Ortiz, (917) 799-5106, ortizbe8813@gmail.com, Staten Island NY; chapter-01 story written with Bryant's name; _autoresponse auto-reply enabled ("Thanks for reaching out to Ortiz Welding — your quote request is in Bryant's hands…")
+- PREVIEW FIX: /app/docs symlinked into /app/frontend/public/ (index.html, styles.css, script.js) and /app/frontend/src/index.js reduced to a no-op so the preview URL (REACT_APP_BACKEND_URL root) serves the static site directly; React template CSS conflict resolved. Verified on live preview URL — dark theme, real details, form flow all confirmed. NOTE: /app/docs remains the single source of truth for GitHub; public/ files are symlinks, edits propagate automatically
 
 ## Backlog
 - P0: User replaces placeholders — business name, phone, email, city, about story, gallery photos
