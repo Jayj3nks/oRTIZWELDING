@@ -24,6 +24,7 @@ Build a website for a freelance welder with a specific price scheme (service cal
 - Quote form (FormSubmit, free): name/email/phone/job-type/message + optional photo attachment (1 image, 5MB max), honeypot spam trap, AJAX submit with success/error states, "Get a quote" nav button scrolls to it. Verified with mocked endpoint — submit flow + success message confirmed; real email delivery pending one-time FormSubmit activation
 - Personalization done: ORTIZ WELDING, Bryant Ortiz, (917) 799-5106, ortizbe8813@gmail.com, Staten Island NY; chapter-01 story written with Bryant's name; _autoresponse auto-reply enabled ("Thanks for reaching out to Ortiz Welding — your quote request is in Bryant's hands…")
 - PREVIEW FIX: /app/docs symlinked into /app/frontend/public/ (index.html, styles.css, script.js) and /app/frontend/src/index.js reduced to a no-op so the preview URL (REACT_APP_BACKEND_URL root) serves the static site directly; React template CSS conflict resolved. Verified on live preview URL — dark theme, real details, form flow all confirmed. NOTE: /app/docs remains the single source of truth for GitHub; public/ files are symlinks, edits propagate automatically
+- Testimonials section ("KIND WORDS") between gallery and quote form: 3 hover-lift review cards with ember quote marks, responsive. Quotes are PLACEHOLDER text (marked TODO in index.html) — must be replaced with real customer reviews before launch. Verified desktop + mobile screenshots
 
 ## Backlog
 - P0: User replaces placeholders — business name, phone, email, city, about story, gallery photos

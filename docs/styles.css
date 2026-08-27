@@ -332,6 +332,31 @@ a.contact__row:hover { padding-left: 1.2rem; background: rgba(255, 92, 26, 0.05)
 }
 @media (max-width: 760px) { .contact__row { grid-template-columns: 1fr; gap: 0.3rem; } }
 
+/* ── REVIEWS ── */
+.reviews { border-top: 1px solid var(--line); }
+.reviews__grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem;
+  padding: 0 4vw 8rem;
+}
+@media (max-width: 900px) { .reviews__grid { grid-template-columns: 1fr; } }
+.review {
+  position: relative; border: 1px solid var(--line); border-radius: 2px;
+  padding: 3.4rem 1.8rem 1.8rem;
+  background: linear-gradient(160deg, rgba(236, 229, 216, 0.03), transparent 60%);
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 22px), calc(100% - 22px) 100%, 0 100%);
+  transition: transform 0.45s cubic-bezier(0.5, 0, 0.2, 1), border-color 0.45s, background-color 0.45s;
+}
+.review:hover { transform: translateY(-6px); border-color: rgba(255, 92, 26, 0.5); background-color: rgba(255, 92, 26, 0.04); }
+.review__mark {
+  position: absolute; top: 0.6rem; left: 1.2rem;
+  font-family: var(--font-display); font-size: 4.5rem; line-height: 1;
+  color: var(--ember); text-shadow: 0 0 26px rgba(255, 92, 26, 0.4);
+}
+.review p { color: var(--bone); font-size: 0.98rem; line-height: 1.7; margin-bottom: 1.6rem; }
+.review footer { display: flex; flex-direction: column; gap: 0.3rem; }
+.review__name { font-family: var(--font-body); font-weight: 600; font-size: 0.9rem; }
+.review__job { font-family: var(--font-mono); font-size: 0.66rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--ash); }
+
 /* ── QUOTE FORM ── */
 .quote { border-top: 1px solid var(--line); }
 .quote__grid {
