@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IRONBOUND WELDING — Mobile Welding & Custom Fabrication</title>
+  <meta name="description" content="Freelance welder. Repairs, gates, railings, custom fabrication. Honest pricing, mobile service, welds that outlast the metal around them." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:ital,wght@0,300;0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- ══ EDIT ME: business name, phone, email and service area are marked with TODO comments ══ -->
+
+  <div class="grain" aria-hidden="true"></div>
+  <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+
+  <!-- NAV -->
+  <header class="nav" id="nav" data-testid="site-nav">
+    <a href="#top" class="nav__brand" data-testid="nav-logo" data-scroll>
+      <span class="nav__mark" aria-hidden="true"></span>
+      <!-- TODO: your business name -->
+      IRONBOUND<span class="nav__thin">WELDING</span>
+    </a>
+    <nav class="nav__links">
+      <a href="#about" data-scroll data-testid="nav-about">Craft</a>
+      <a href="#services" data-scroll data-testid="nav-services">Services</a>
+      <a href="#pricing" data-scroll data-testid="nav-pricing">Prices</a>
+      <a href="#work" data-scroll data-testid="nav-work">Work</a>
+    </nav>
+    <a href="#contact" class="btn btn--pill" data-scroll data-testid="nav-quote-btn"><span>Get a quote</span></a>
+  </header>
+
+  <main id="top">
+
+    <!-- ═══ HERO ═══ -->
+    <section class="hero" id="hero" data-testid="hero-section">
+      <canvas id="sparks" class="hero__sparks" aria-hidden="true"></canvas>
+      <div class="hero__glow" aria-hidden="true"></div>
+
+      <div class="hero__inner" id="heroInner">
+        <p class="hero__kicker" data-intro>
+          <span class="hero__kicker-dot" aria-hidden="true"></span>
+          <!-- TODO: your city / service area -->
+          Mobile welding · Your City &amp; beyond
+        </p>
+
+        <h1 class="hero__title">
+          <span class="mask"><span class="mask__in">METAL BREAKS.</span></span>
+          <span class="mask"><span class="mask__in mask__in--accent">I MAKE IT</span></span>
+          <span class="mask"><span class="mask__in">WHOLE AGAIN.</span></span>
+        </h1>
+
+        <div class="hero__meta" data-intro>
+          <p class="hero__sub">Repairs, gates, railings &amp; one-of-one fabrication — welded on site, priced before the arc is struck.</p>
+          <div class="hero__cta">
+            <a href="#pricing" class="btn btn--solid" data-scroll data-testid="hero-pricing-btn"><span>See the price list</span></a>
+            <a href="#work" class="btn btn--ghost" data-scroll data-testid="hero-work-btn"><span>View the work</span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__foot" data-intro>
+        <span class="hero__foot-item">MIG</span>
+        <span class="hero__foot-item">TIG</span>
+        <span class="hero__foot-item">STICK</span>
+        <span class="hero__scroll" aria-hidden="true"><i></i>SCROLL</span>
+      </div>
+    </section>
+
+    <!-- ═══ MARQUEE ═══ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>MOBILE WELDING — GATES &amp; RAILINGS — REPAIRS ON SITE — CUSTOM FABRICATION — NO JOB TOO SMALL —&nbsp;</span>
+        <span>MOBILE WELDING — GATES &amp; RAILINGS — REPAIRS ON SITE — CUSTOM FABRICATION — NO JOB TOO SMALL —&nbsp;</span>
+      </div>
+    </div>
+
+    <!-- ═══ MANIFESTO / ABOUT ═══ -->
+    <section class="manifesto" id="about" data-testid="about-section">
+      <header class="section-head" data-reveal>
+        <span class="section-head__no">CHAPTER 01—03</span>
+        <h2 class="section-head__title">THE CRAFT</h2>
+      </header>
+
+      <article class="chapter" data-reveal>
+        <span class="chapter__no">01</span>
+        <div class="chapter__body">
+          <h3>One welder. No middlemen.</h3>
+          <!-- TODO: replace with your own story -->
+          <p>You talk to the person who strikes the arc. Every job — from a cracked bracket to a full driveway gate — gets the same pair of hands and the same standard. Your story goes here: years on the torch, what you love building, why you work solo.</p>
+        </div>
+      </article>
+
+      <article class="chapter" data-reveal>
+        <span class="chapter__no">02</span>
+        <div class="chapter__body">
+          <h3>The shop comes to you.</h3>
+          <p>Fully mobile rig — welder, generator, grinders, steel. Farm gates, trailer hitches, stair railings, equipment repairs: fixed where they stand, no hauling, no waiting on a shop's schedule.</p>
+        </div>
+      </article>
+
+      <article class="chapter" data-reveal>
+        <span class="chapter__no">03</span>
+        <div class="chapter__body">
+          <h3>Price before sparks.</h3>
+          <p>Every job is quoted up front, in writing, before any metal is cut. The number we agree on is the number you pay. Scroll down — the full price list is right there on this page.</p>
+        </div>
+      </article>
+    </section>
+
+    <!-- ═══ SERVICES ═══ -->
+    <section class="services" id="services" data-testid="services-section">
+      <header class="section-head" data-reveal>
+        <span class="section-head__no">WHAT I DO</span>
+        <h2 class="section-head__title">SERVICES</h2>
+      </header>
+
+      <ul class="service-list">
+        <li class="service" data-reveal data-testid="service-repairs">
+          <span class="service__no">S.01</span>
+          <span class="service__name">Repairs &amp; Crack Welding</span>
+          <span class="service__desc">Brackets, hinges, exhausts, equipment, furniture</span>
+        </li>
+        <li class="service" data-reveal data-testid="service-gates">
+          <span class="service__no">S.02</span>
+          <span class="service__name">Gates &amp; Railings</span>
+          <span class="service__desc">Driveway gates, stair railings, fence sections</span>
+        </li>
+        <li class="service" data-reveal data-testid="service-fab">
+          <span class="service__no">S.03</span>
+          <span class="service__name">Custom Fabrication</span>
+          <span class="service__desc">Table frames, racks, planters, one-of-one builds</span>
+        </li>
+        <li class="service" data-reveal data-testid="service-mobile">
+          <span class="service__no">S.04</span>
+          <span class="service__name">Mobile / On-Site Welding</span>
+          <span class="service__desc">Farm, fleet &amp; field repairs at your location</span>
+        </li>
+        <li class="service" data-reveal data-testid="service-commercial">
+          <span class="service__no">S.05</span>
+          <span class="service__name">Commercial Work</span>
+          <span class="service__desc">Structural steel, shop fit-outs — quoted per project</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ═══ PRICING ═══ -->
+    <section class="pricing" id="pricing" data-testid="pricing-section">
+      <header class="section-head" data-reveal>
+        <span class="section-head__no">NO SURPRISES</span>
+        <h2 class="section-head__title">PRICE LIST</h2>
+      </header>
+
+      <ol class="price-list">
+        <li class="price" data-reveal data-testid="price-minimum">
+          <span class="price__job">Minimum job / service call</span>
+          <span class="price__rule" aria-hidden="true"></span>
+          <span class="price__amount">$200–$250 <em>minimum</em></span>
+        </li>
+        <li class="price" data-reveal data-testid="price-tiny">
+          <span class="price__job">Tiny repair <small>one crack, bracket, small tack job</small></span>
+          <span class="price__rule" aria-hidden="true"></span>
+          <span class="price__amount">$200–$300</span>
+        </li>
+        <li class="price" data-reveal data-testid="price-small">
+          <span class="price__job">Small repair <small>chair, railing section, gate hinge, exhaust bracket</small></span>
+          <span class="price__rule" aria-hidden="true"></span>
+          <span class="price__amount">$300–$450</span>
+        </li>
+        <li class="price" data-reveal data-testid="price-medium">
+          <span class="price__job">Medium repair / fabrication</span>
+          <span class="price__rule" aria-hidden="true"></span>
+          <span class="price__amount">$450–$750</span>
+        </li>
+        <li class="price" data-reveal data-testid="price-large">
+          <span class="price__job">Larger fabrication <small>gate, railing, table frame, etc.</small></span>
+          <span class="price__rule" aria-hidden="true"></span>
+          <span class="price__amount">$750–$1,500+</span>
+        </li>
+        <li class="price" data-reveal data-testid="price-custom">
+          <span class="price__job">Custom fabrication project</span>
+          <span class="price__rule" aria-hidden="true"></span>
+          <span class="price__amount">$1,500–$5,000+</span>
+        </li>
+        <li class="price" data-reveal data-testid="price-commercial">
+          <span class="price__job">Large commercial / custom work</span>
+          <span class="price__rule" aria-hidden="true"></span>
+          <span class="price__amount price__amount--quote">Quoted individually</span>
+        </li>
+      </ol>
+
+      <p class="pricing__note" data-reveal>Final quote depends on material, access &amp; prep — always confirmed before work begins.</p>
+    </section>
+
+    <!-- ═══ WORK / GALLERY ═══ -->
+    <section class="work" id="work" data-testid="work-section">
+      <header class="section-head" data-reveal>
+        <span class="section-head__no">PROOF, NOT PROMISES</span>
+        <h2 class="section-head__title">THE WORK</h2>
+      </header>
+
+      <div class="work__grid">
+        <figure class="frame frame--tall" data-reveal data-testid="work-frame-1">
+          <div class="frame__inner frame__inner--empty"><span>PHOTO 01</span></div>
+          <figcaption>Driveway gate · steel &amp; cedar</figcaption>
+        </figure>
+        <figure class="frame" data-reveal data-testid="work-frame-2">
+          <div class="frame__inner frame__inner--empty"><span>PHOTO 02</span></div>
+          <figcaption>Stair railing · matte black</figcaption>
+        </figure>
+        <figure class="frame" data-reveal data-testid="work-frame-3">
+          <div class="frame__inner frame__inner--empty"><span>PHOTO 03</span></div>
+          <figcaption>Table base · custom build</figcaption>
+        </figure>
+        <figure class="frame frame--wide" data-reveal data-testid="work-frame-4">
+          <div class="frame__inner frame__inner--empty"><span>PHOTO 04</span></div>
+          <figcaption>Trailer repair · on site</figcaption>
+        </figure>
+      </div>
+      <!-- TODO: drop your photos into /docs/photos/ and swap each .frame__inner--empty div for an <img> tag -->
+    </section>
+
+    <!-- ═══ CONTACT ═══ -->
+    <section class="contact" id="contact" data-testid="contact-section">
+      <p class="contact__kicker" data-reveal>GOT SOMETHING BROKEN — OR AN IDEA IN STEEL?</p>
+      <h2 class="contact__title" data-reveal>
+        <span class="mask"><span class="mask__in">LET'S</span></span>
+        <span class="mask"><span class="mask__in mask__in--accent">WELD IT.</span></span>
+      </h2>
+
+      <div class="contact__rows" data-reveal>
+        <!-- TODO: your phone number -->
+        <a class="contact__row" href="tel:+15550123456" data-testid="contact-phone">
+          <span class="contact__label">CALL / TEXT</span>
+          <span class="contact__value">(555) 012-3456</span>
+        </a>
+        <!-- TODO: your email -->
+        <a class="contact__row" href="mailto:hello@yourwelding.com" data-testid="contact-email">
+          <span class="contact__label">EMAIL</span>
+          <span class="contact__value">hello@yourwelding.com</span>
+        </a>
+        <div class="contact__row contact__row--static" data-testid="contact-area">
+          <span class="contact__label">SERVICE AREA</span>
+          <!-- TODO: your service area -->
+          <span class="contact__value">Your City + 50 miles</span>
+        </div>
+      </div>
+      <p class="contact__hint" data-reveal>Text a photo of the job for the fastest quote.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>© <span id="year"></span> IRONBOUND WELDING</span>
+    <span class="footer__right">BUILT WITH FIRE · <a href="#top" data-scroll data-testid="footer-top-link">BACK TO TOP ↑</a></span>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
